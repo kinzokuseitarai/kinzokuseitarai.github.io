@@ -1,16 +1,29 @@
-body {
-    background-color: #f0f0f0;
-    margin: unset;
+/* --- 基本設定 --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.mte-main {
-    background-color: #fafafa;
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    padding: 20px;
+}
+
+.MTE-main {
+    background-color: #fcfcfc;
+    width: 100%;
     max-width: 800px;
-    padding: 10px;
-    margin: 0 auto;
+    min-width: 450px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
 }
 
 header {
+    margin: 20px;
     height: 48px;
 }
 
@@ -19,14 +32,83 @@ header {
     background-size: cover;
     width: 48px;
     height: 100%;
+    border-radius: 50%;
     float: left;
+    margin-right: 10px;
+}
+
+header h1 {
+    text-align: left;
+}
+
+.MTE-description {
+    margin: 10px;
+    text-align: left;
+}
+
+.MTE-bio {
+    margin: 10px;
+    text-align: left;
+}
+
+.MTE-bio p {
+    margin: 10px;
+}
+
+.MTE-links {
+    margin: 10px;
+    text-align: left;
+}
+
+.MTE-links h3 {
+    margin: 10px;
+}
+
+.MTE-links a {
+    margin-left: 20px;
+}
+
+.MTE-contact {
+    margin: 10px;
+    text-align: left;
+}
+
+.MTE-contact h2 {
+    margin-bottom: 10px;
+}
+
+.MTE-contact a {
+    margin: 10px;
+}
+
+.MTE-contact p {
+    margin: 10px;
+}
+
+#check-mail {
+    display: none;
+}
+#check-mail + .label::after {
+    content: "click to display mail address"
+}
+#check-mail:checked + .label::after {
+    content: "kinzokuseitarai[at]gmail.com"
+}
+.label {
+    margin: 10px;
+    font-style: italic;
+    color:#404040;
 }
 
 footer {
-    text-align: center;
+    margin: 20px;
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 300;
+    font-style: italic;
 }
 
-.copylight {
-    color: #999;
-    font-style: italic;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to {opacity: 1; transform: translateY(0); }
 }
